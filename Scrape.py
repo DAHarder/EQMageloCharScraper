@@ -7,6 +7,7 @@ from CharacterInventoryDict import *
 
 tableUrl = 'http://magelo.ezserver.online/index.php?page=search&name=a&guild=&orderby=level&direction=DESC&start=' #Used with getCharacterData
 inventoryUrl = 'http://magelo.ezserver.online/index.php?page=character&char=' #Used with getCharInventoryData
+#Test Comment
 
 class Scrape:
 
