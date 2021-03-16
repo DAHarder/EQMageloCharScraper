@@ -1,3 +1,5 @@
+import csv
+
 class CharacterInventory:
     def __init__(self, name=0, level=0, charClass=0,earsL=0, earsR=0, head=0, face=0, chest=0, neck=0, arms=0, back=0, waist=0, shoulders=0, wristsL=0, wristsR=0, legs=0, hands=0, charm=0, feet=0, fingerL=0, fingerR=0, rangeAmmo=0, primary=0, secondary=0, range=0, powersource=0, patterns=[]):
         self.name = name
@@ -33,4 +35,14 @@ class CharacterInventory:
         printTemp = vars(self)
         for item in printTemp:
             print(item, ':', printTemp[item])
-        
+
+
+    def addToCSV(self):
+        temp = vars(self)
+        i = 0
+        with open('character_Inventory_csv.csv', 'a', newline='') as csv_file:
+            writer = csv.writer(csv_file)
+            for key, value in temp.items():
+                if(i > 3 ):
+                    writer.writerow([self.name, self.level, self.charClass, key, value])
+                i += 1

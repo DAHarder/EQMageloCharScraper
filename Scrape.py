@@ -116,9 +116,9 @@ class Scrape:
                 continue
                 # print('emtpy')
 
-for key, value in Scrape().getCharacterData(78,1).items():
-    # print(key, value[0], value[1])
-    Scrape().getCharInventoryData(key, value[0], value[1])
+# for key, value in Scrape().getCharacterData(78,1).items():
+#     # print(key, value[0], value[1])
+#     Scrape().getCharInventoryData(key, value[0], value[1])
 # Scrape().getCharacterData(1,1)
 
 # Scrape().getSlotData('http://magelo.ezserver.online/index.php?page=character&char=Himurra')
